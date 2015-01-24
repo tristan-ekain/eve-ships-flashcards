@@ -131,6 +131,11 @@ Click **Import File**, then select the card deck (file name ends with ".apkg"). 
 That means that if you later get an updated card deck file, just follow these steps again. The learning progress data is not modified by the import, so updating is safe to do.
 
 
+## Legal Notes
+
+This project is released under the Apache 2.0 license (see [LICENSE](LICENSE)).  
+All EVE Online related materials are property of CCP hf.
+
 [anki]: http://ankisrs.net/
 [ccp-sde]: https://developers.eveonline.com/resource/static-data-export "CCP's Static Data Export"
 [ccp-iec]: https://developers.eveonline.com/resource/image-export-collection "CCP's Image Export Collection"
