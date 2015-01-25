@@ -33,11 +33,14 @@ class AnkiDataBuilder:
 
     def write_csv(self, filename):
         with open(filename, 'w') as file:
+
             c = csv.writer(file, delimiter='\t', lineterminator='\n')
-            c.writerow(['Ship', 'Ship Type', 'Meta Group', 'Hull', 'Race', 'Image', 'Category Tag'])
+            # Add '#' to first field, so Anki treats the line as a comment line.
+            c.writerow(['# Type ID', 'Ship', 'Ship Type', 'Meta Group', 'Hull', 'Race', 'Image', 'Category Tag'])
 
             for ship in self.ships:
                 c.writerow([
+                    ship[const.CSV_COL_TYPE_ID],
                     ship[const.CSV_COL_SHIP],
                     ship[const.CSV_COL_SHIP_CLASS],
                     ship[const.CSV_COL_META_GROUP],
