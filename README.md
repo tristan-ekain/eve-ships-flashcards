@@ -26,7 +26,7 @@ Install the following software:
 
 * This project. Check out with Git, or download as ZIP file and extract somewhere. The location of the sources on your hard drive will be referred to as **workspace** from now on.
 * The SDE dump in sqlite format. CCP provides it in MS SQL format only, but other players convert them into various format. An sqlite conversion can be found e.g. here: [https://www.fuzzwork.co.uk/dump/](https://www.fuzzwork.co.uk/dump/)
-* The images: from [CCCP's site][ccp-sde] download the **Renders** ZIP file. This file contains high-resolution images for all of EVE's items.
+* The images: from [CCP's site][ccp-sde] download the **Renders** ZIP file. This file contains high-resolution images for all of EVE's items.
 
 
 ## Setup local workspace
