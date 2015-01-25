@@ -33,7 +33,7 @@ Install the following software:
 
 * Extract the SDE dump, and copy the sqlite database into the *data* subdirectory of your workspace. The file must be called **eve.sqlite**.
 * Extract the *Renders* ZIP file. Copy all the images into the *data/Renders* subdirectory of your workspace.  
-These images are quite big (512x512 pixels). You can resizse them down to 256x256 pixels to make the resulting Anki file smaller.
+These images are quite big (512x512 pixels). You can resize them down to 256x256 pixels to make the resulting Anki file smaller.
 
 After these steps, your workspace should look like this:
 <pre>
