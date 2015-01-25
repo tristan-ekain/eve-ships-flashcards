@@ -13,9 +13,15 @@ import constants as const
 #   This term refers to a ship that differs from its "unskinned" sibling only in its looks, but not in its attributes.
 
 
+# Blacklist
 SKINNED_SHIPS = frozenset([
     'Police Pursuit Comet', # variant of Federation Navy Comet
     "Goru's Shuttle",       # variant of the Caldari Shuttle
+    ])
+
+# Whitelist for ships that would be incorrectly flagged as skinned ships.
+NOT_SKINNED_SHIPS = frozenset([
+    'Miasmos Quafe Ultra Edition'
     ])
 
 ATTRIBUTE_METALEVEL = 633
@@ -138,6 +144,9 @@ class ShipTraits:
 
     @staticmethod
     def is_skinned_ship(ship):
+        if ship.type_name in NOT_SKINNED_SHIPS:
+            return False
+
         # Normal faction ships have a meta level > 0
         if ship.meta_group == 'Faction' and ship.meta_level == 0:
             return True
