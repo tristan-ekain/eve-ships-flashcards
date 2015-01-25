@@ -110,10 +110,10 @@ If you want to update your cards at a later time, just run these steps again.
 
 The following steps are optional, but advisable: export all cards, and import them into the separate profile with which you learn.
 
-* Click **File -> Export...*
+* Click **File -> Export...**
 * As "Export format" select "Anki Deck Package".
 * In the "Include" dropdown box select the deck that contains the ship cards.
-* Deselect "Scheduling Information"
+* Deselect "Include scheduling Information"
 * Select "Include Media"
 * Click **Export...** and select where to save the exported data.
 
