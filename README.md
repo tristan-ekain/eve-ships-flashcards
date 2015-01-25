@@ -97,7 +97,7 @@ In this folder, go to the subfolder for your profile. There you should find a fo
 The next step is importing the ships into Anki. Click **Import File** and select **output/anki/anki.csv**. This will open the import dialog. In this dialog, apply the following settings:
 
 * Set "Type" to "Ship".
-* Set "Deck" to the deck into which you want to import the cards. The default settings is fine.
+* Set "Deck" to the deck into which you want to import the cards. The default setting is fine.
 * In the dropdown box, select "Update existing notes when first field matches". When you don't have any cards yet, this doesn't matter, but if you already have some, this will cause Anki to update your cards with the new data from the CSV file.
 * Select "Allow HTML in fields". Otherwise the images won't get imported.
 * Under "Field Mapping", assign the columns from the CSV file to the corresponding columns in Anki. Make sure that every field in Anki gets a column mapped to. Also, the "Category Tag" column from the CSV needs to be mapped the "Tags" field.
