@@ -70,7 +70,7 @@ If not already there, put the file **ships.csv** into the **output** directory. 
 The script does two things:
 
 * It creates a CSV file that Anki can import, and saves it under **output/anki/anki.csv**.
-* It copy all ship images from **data/Render** to **output/anki/collection.media**. The images of other item types are not copied.
+* It copies all ship images from **data/Render** to **output/anki/collection.media**. The images of other item types are not copied.
 
 
 ## Import Data into Anki
