@@ -6,7 +6,7 @@ This project provides ready-made flash cards for the flashcard application [Anki
 
 ## Want to Know More?
 
-More information about this project, together with downloads, can be found on the [wiki](https://github.com/tristan-ekain/eve-ship-flashcards/wiki).
+More information about this project, together with downloads, can be found on the [wiki](https://github.com/tristan-ekain/eve-ships-flashcards/wiki).
 
 ## Legal Notes
 
