@@ -4,7 +4,9 @@ EVE Online has more than 300 different ship types. Learning the names and basic 
 
 This project provides ready-made flash cards for the flashcard application [Anki][anki], as well as the tools neccessary to create them.
 
-You can find more information on the [wiki](https://github.com/tristan-ekain/eve-ship-flashcards/wiki).
+## Want to Know More?
+
+More information about this project, together with downloads, can be found on the [wiki](https://github.com/tristan-ekain/eve-ship-flashcards/wiki).
 
 ## Legal Notes
 
