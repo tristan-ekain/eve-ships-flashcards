@@ -28,6 +28,12 @@ ATTRIBUTE_METALEVEL = 633
 ATTRIBUTE_META_GROUP_ID = 1692
 ATTRIBUTE_TECH_LEVEL = 422
 
+TECH_LEVEL_TO_STRING = {
+    1: 'Tech I',
+    2: 'Tech II',
+    3: 'Tech III'
+    }
+
 
 class Ship:
 
@@ -102,17 +108,26 @@ class ShipsRetriever:
             meta_level = self.get_attribute(ship.type_id, ATTRIBUTE_METALEVEL);
             ship.meta_level = int(meta_level)
 
-            # Meta Level
+            # Tech Level
             tech_level = self.get_attribute(ship.type_id, ATTRIBUTE_TECH_LEVEL)
-            ship.tech_level = int(tech_level)            
-
+            ship.tech_level = int(tech_level)
+            
             # Meta Group
             try:
                 meta_type = self.meta_types_by_id[ship.type_id]
                 ship.meta_group = meta_type['metaGroupName']
                 ship.base_type = ships[meta_type['parentTypeID']].type_name
             except KeyError:
-                ship.meta_group = 'Tech I'
+                pass
+				
+            if ship.meta_group is None:
+                # Ships that are not based on another hull don't have a meta group; we need to use the tech level instead.
+                # Just always using the tech level doesn't work for faction ships.
+                ship.meta_group = TECH_LEVEL_TO_STRING.get(tech_level)
+
+            if ship.meta_group is None:
+                # If we still don't know the meta group, use a string that makes the problem obvious.
+                ship.meta_group = 'UNKNOWN'
 
             # Market Group
             market_groups = self.con.execute(
