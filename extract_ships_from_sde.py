@@ -28,11 +28,10 @@ ATTRIBUTE_METALEVEL = 633
 ATTRIBUTE_META_GROUP_ID = 1692
 ATTRIBUTE_TECH_LEVEL = 422
 
-TECH_LEVEL_TO_STRING = {
-    1: 'Tech I',
-    2: 'Tech II',
-    3: 'Tech III'
-    }
+META_GROUP_TECH_1 = 'Tech I'
+META_GROUP_TECH_2 = 'Tech II'
+META_GROUP_TECH_3 = 'Tech III'
+META_GROUP_FACTION = 'Faction'
 
 
 class Ship:
@@ -121,13 +120,19 @@ class ShipsRetriever:
                 pass
 				
             if ship.meta_group is None:
-                # Ships that are not based on another hull don't have a meta group; we need to use the tech level instead.
-                # Just always using the tech level doesn't work for faction ships.
-                ship.meta_group = TECH_LEVEL_TO_STRING.get(tech_level)
-
-            if ship.meta_group is None:
-                # If we still don't know the meta group, use a string that makes the problem obvious.
-                ship.meta_group = 'UNKNOWN'
+                # Ships that are not based on another hull don't have an entry in 'invMetaTypes', so we use the tech level.
+                if tech_level == 1:
+                    if meta_level == 0:
+                        ship.meta_group = META_GROUP_TECH_1
+                    else:
+                        ship.meta_group = META_GROUP_FACTION
+                elif tech_level == 2:
+                    ship.meta_group = META_GROUP_TECH_2
+                elif tech_level == 3:
+                    ship.meta_group = META_GROUP_TECH_3
+                else:
+                    # Unknown tech level or incorrect data
+                    ship.meta_group = 'UNKNOWN'
 
             # Market Group
             market_groups = self.con.execute(
