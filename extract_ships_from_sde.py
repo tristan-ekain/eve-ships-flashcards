@@ -188,7 +188,7 @@ def write_csv(ships, filename):
     sorted_ships = sorted(ships, key=lambda ship: ship.type_name)
     
     with open(filename, 'w') as file:
-        c = csv.writer(file, delimiter=',', lineterminator='\n')
+        c = csv.writer(file, delimiter='\t', lineterminator='\n')
         c.writerow([const.CSV_COL_SHIP, const.CSV_COL_SHIP_CLASS, const.CSV_COL_META_GROUP, const.CSV_COL_TECH_LEVEL, const.CSV_COL_META_LEVEL,
                     const.CSV_COL_HULL, const.CSV_COL_RACE, const.CSV_COL_MARKET_GROUP, const.CSV_COL_TYPE_ID, const.CSV_COL_IGNORE])
             

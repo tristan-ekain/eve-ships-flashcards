@@ -17,7 +17,7 @@ class AnkiDataBuilder:
 
     def read_ships_csv(self, filename):
         with open(filename, 'r') as file:
-            reader = csv.DictReader(file)
+            reader = csv.DictReader(file, delimiter='\t')
 
             # Remove all ships that have 'IGNORE' set to True.
             ships = list(filter(lambda row: row[const.CSV_COL_IGNORE] != 'TRUE', reader))
